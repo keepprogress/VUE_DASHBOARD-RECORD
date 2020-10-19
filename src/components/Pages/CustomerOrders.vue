@@ -69,6 +69,9 @@
                         加到購物車
                     </button>
                 </div>
+              </div>
+            </div>
+          </div>
 </template>
 
 <script>
@@ -132,8 +135,8 @@ export default {
                     vm.products = response.data.products;
                     console.log(response);
                     vm.isLoading = false;
-                )
-            };
+                
+            });
         },
         removeCartItem(id) {
             const vm = this;
@@ -142,8 +145,8 @@ export default {
             this.$http.delete(url).then(() => {
                     // vm.products = response.data.products;
                     vm.isLoading = false;
-                )
-            };
+                
+            });
         },
         addCouponCode() {
             const vm = this;
